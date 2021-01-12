@@ -247,15 +247,17 @@
 
           <form action="https://formspree.io/f/xnqolora"
           method="POST">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email:</label>
-              <input type="email" name="_replyto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email address</label>
+              <input type="email" name="_replyto" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Your Message:</label>
-              <input type="message" name="message" class="form-control" id="exampleFormControlTextarea1" />
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+              <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-info mt-3">Send Message</button>
+
+            <button type="submit" class="btn btn-info mt-3">Submit</button>
           </form>
         </div>
 

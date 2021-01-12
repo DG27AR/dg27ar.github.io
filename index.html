@@ -206,14 +206,16 @@
         <thead>
           <tr class="table-success">
             <th scope="row" class="text-center">Project</th>
+            <td class="text-center">Date</td>
             <td class="text-center">Details</td>
             <td class="text-center" colspan="2">Visit the:</t>
           </tr>
         </thead>
         <tbody>
         <tr>
-            <th scope="row">1/2021-PORTFOLIO</th>
-            <td>This portfolio, made with HTML/ CSS/ JS/ Bootstrap.</td>
+            <th scope="row">PORTFOLIO</th>
+            <td class="text-center">01/2021</td>
+            <td class="text-justify">This portfolio, made with HTML/ CSS/ JS/ Bootstrap.</td>
             <td class="text-center">
               <!-- <a class="btn btn-secondary" target="_blank" href="https://dg27ar.github.io/"><i class="fas fa-link mr-1"></i>Site</a> -->
             </td>
@@ -222,8 +224,9 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">11/2020-FIDENOA</th>
-            <td>A custom Wordpress theme to a local health care foundation, made with HTML/ CSS/ PHP/ Bootstrap.</td>
+            <th scope="row">FIDENOA</th>
+            <td class="text-center">11/2020</td>
+            <td class="text-justify">A custom Wordpress theme to a local health care foundation, made with HTML/ CSS/ PHP/ Bootstrap.</td>
             <td class="text-center">
               <a class="btn btn-secondary" target="_blank" href="https://fidenoa.ar"><i class="fas fa-link mr-1"></i>Site</a>
             </td>
@@ -245,16 +248,22 @@
             <h4 class="font-bold contact-me-title">Contact Me</h4>
           </div>
 
-          <form action="https://formspree.io/f/xnqolora"
-          method="POST">
+          <form class="needs-validation" action="https://formspree.io/f/xnqolora"
+          method="POST" novalidate>
 
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Email address</label>
-              <input type="email" name="_replyto" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              <label for="validationCustom01" class="form-label">Email address</label>
+              <input type="email" name="_replyto" class="form-control" id="validationCustom01" required>
+              <div class="invalid-feedback">
+                Please, provide an email direction.
+              </div>
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
-              <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3" placeholder="Write here your message, i´ll answer you soon!."></textarea>
+              <label for="validationCustom02" class="form-label">Your Message</label>
+              <textarea class="form-control" name="message" id="validationCustom02" rows="3" required></textarea>
+              <div class="invalid-feedback">
+                Please, write your message here, 5 characters min and 500 max.
+              </div>
             </div>
 
             <button type="submit" class="btn btn-info mt-3">Submit</button>
@@ -322,5 +331,32 @@
         distance: '300px',
       });
     </script>
+
+    <!-- Bootstrap Validation -->
+    <script>
+      
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+
+    </script>
+
   </body>
 </html>
